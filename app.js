@@ -19,6 +19,11 @@ function toCsvUrl(link) {
   // Accepts /spreadsheets/d/<id>/... and account-scoped /spreadsheets/u/0/d/<id>/... links.
   const idMatch = url.pathname.match(/\/spreadsheets\/(?:u\/\d+\/)?d\/([a-zA-Z0-9_-]+)/);
   if (!idMatch) throw new Error("That doesn't look like a Google Sheets link.");
+  // rtpof=true marks an uploaded Office file opened in Sheets; Google only exports native Sheets as CSV.
+  if (url.searchParams.get("rtpof") === "true") {
+    throw new Error("This link is an Excel file stored in Google Drive, not a Google Sheet. " +
+      "Open it, choose File → Save as Google Sheets, share the new sheet publicly, and use its link.");
+  }
   const gid = url.searchParams.get("gid") || (url.hash.match(/gid=(\d+)/) || [])[1];
   const csv = new URL(`https://docs.google.com/spreadsheets/d/${idMatch[1]}/gviz/tq`);
   csv.searchParams.set("tqx", "out:csv");
