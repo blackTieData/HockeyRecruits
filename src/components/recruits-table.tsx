@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { ArrowDown, ArrowUp } from "lucide-react"
 import {
   Table, TableBody, TableCell, TableHead, TableHeader, TableRow,
@@ -59,15 +59,56 @@ export function RecruitsTable({ headers, rows, allRows, visibleCols, sort, onSor
   // fontsReady is only a re-measure trigger.
   }), [headers, allRows, fontsReady])
 
+  // Show each new page (or re-sorted/filtered list) from its first row.
+  const wrapper = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    const container = wrapper.current?.querySelector("[data-slot=table-container]")
+    if (container) container.scrollTop = 0
+  }, [rows])
+
+  // Mobile: the page scrolls, but the table sits in a sideways-scrolling box, so CSS sticky can't pin
+  // its header to the viewport. Instead, shift the header down by however far the table's top has
+  // passed under the site's title bar. Desktop keeps the header pinned with sticky inside the box.
+  useEffect(() => {
+    const desktop = matchMedia("(min-width: 48rem)")
+    let frame = 0
+    const update = () => {
+      frame = 0
+      const table = wrapper.current?.querySelector("table")
+      const head = table?.tHead
+      if (!table || !head) return
+      let offset = 0
+      if (!desktop.matches) {
+        const titleBar = document.querySelector("[data-site-header]")?.getBoundingClientRect().bottom ?? 0
+        const travel = table.offsetHeight - head.offsetHeight
+        offset = Math.min(Math.max(0, titleBar - table.getBoundingClientRect().top), Math.max(0, travel))
+      }
+      table.style.setProperty("--head-offset", `${offset}px`)
+    }
+    const schedule = () => { if (!frame) frame = requestAnimationFrame(update) }
+    update()
+    addEventListener("scroll", schedule, { passive: true })
+    addEventListener("resize", schedule)
+    desktop.addEventListener("change", schedule)
+    return () => {
+      cancelAnimationFrame(frame)
+      removeEventListener("scroll", schedule)
+      removeEventListener("resize", schedule)
+      desktop.removeEventListener("change", schedule)
+    }
+  }, [rows])
+
   return (
-    // The table container scrolls both ways so the header can stay pinned while scrolling rows.
-    <div className="rounded-lg border bg-card [&_[data-slot=table-container]]:max-h-[70vh] [&_[data-slot=table-container]]:overflow-auto">
+    // Desktop: the table container fills the remaining height and scrolls both ways, so the header
+    // stays pinned. Mobile: it only scrolls sideways and the page scrolls the rows.
+    <div ref={wrapper} className="flex flex-col rounded-lg border bg-card md:min-h-0 md:flex-1 md:[&_[data-slot=table-container]]:min-h-0 md:[&_[data-slot=table-container]]:flex-1 md:[&_[data-slot=table-container]]:overflow-auto">
       {/* Fixed layout with explicit widths; the table is as wide as its columns, not the container. */}
       <Table className="w-max table-fixed" style={{ width: visibleCols.reduce((n, c) => n + widths[c], 0) }}>
         <colgroup>
           {visibleCols.map(col => <col key={col} style={{ width: widths[col] }} />)}
         </colgroup>
-        <TableHeader className="sticky top-0 z-10 bg-card shadow-[inset_0_-1px_0_var(--border)]">
+        <TableHeader className="sticky top-0 z-10 bg-card shadow-[inset_0_-1px_0_var(--border)]"
+          style={{ transform: "translateY(var(--head-offset, 0px))" }}>
           <TableRow className="hover:bg-transparent">
             {visibleCols.map(col => {
               const active = sort?.col === col
