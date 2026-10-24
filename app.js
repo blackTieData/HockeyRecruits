@@ -16,7 +16,8 @@ let sortDir = 1;
 // Turn a Google Sheets share/edit link into a CSV URL that allows cross-origin reads.
 function toCsvUrl(link) {
   const url = new URL(link);
-  const idMatch = url.pathname.match(/\/spreadsheets\/d\/([a-zA-Z0-9_-]+)/);
+  // Accepts /spreadsheets/d/<id>/... and account-scoped /spreadsheets/u/0/d/<id>/... links.
+  const idMatch = url.pathname.match(/\/spreadsheets\/(?:u\/\d+\/)?d\/([a-zA-Z0-9_-]+)/);
   if (!idMatch) throw new Error("That doesn't look like a Google Sheets link.");
   const gid = url.searchParams.get("gid") || (url.hash.match(/gid=(\d+)/) || [])[1];
   const csv = new URL(`https://docs.google.com/spreadsheets/d/${idMatch[1]}/gviz/tq`);
