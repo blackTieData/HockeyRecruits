@@ -1,27 +1,35 @@
 # Hockey Recruits
 
-A simple static web app for viewing the contents of a public Google Sheet as a searchable, sortable table.
+A web app that shows the hockey recruiting Google Sheet as a searchable, sortable table with charts.
+Built with Vite, React, TypeScript, Tailwind CSS and shadcn/ui.
 
 ## Usage
 
-1. In Google Sheets, click **Share** and set General access to **Anyone with the link → Viewer**.
-2. Open `index.html` and paste the sheet's link, then click **Load**.
+The sheet link is hardcoded as `SHEET_URL` in `src/lib/sheet.ts`; edit it to point at a different sheet.
+The sheet must be shared as **Anyone with the link → Viewer**.
 
-- For a generic sheet, the first row is used as column headers.
-- For the hockey recruiting sheet (one block per school with DECOMMITS / TRACKING sections), the blocks are flattened into a single table with School, Conference and Status columns, and dropdown filters for each.
+- The sheet's per-school blocks (with DECOMMITS / TRACKING sections) are flattened into one table with
+  School, Conference and Status columns, plus dropdown filters for each.
 - Click a column header to sort (click again to reverse).
-- Type in the filter box to show only rows containing that text.
-- To show a specific tab, use a link that includes `#gid=...` (copy the URL while that tab is open).
-- The loaded sheet is saved in the page URL (`?sheet=...`), so you can bookmark or share the view.
+- Click a row to highlight it; click it again to clear. **Clear highlighted** removes them all.
+- **Columns** shows or hides columns; your choice is remembered in this browser.
+- The **Charts** tab follows the search and filters. Without a Status filter, charts count committed
+  players only, so recent-commit and tracking rows aren't double counted.
+- The **Light / Dark** button switches theme (dark by default); your choice is remembered in this browser.
 
 ## Running locally
 
-No build step or dependencies. Serve the folder with any static server, e.g.:
-
 ```sh
-python3 -m http.server 8000
+npm install
+npm run dev
 ```
 
-then open http://localhost:8000.
+then open http://localhost:5173.
 
-It can also be hosted as-is on GitHub Pages, Netlify, Cloudflare Pages, etc.
+## Deploying
+
+```sh
+npm run build
+```
+
+writes a static site to `dist/`, which can be hosted on GitHub Pages, Netlify, Cloudflare Pages, etc.

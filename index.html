@@ -1,30 +1,16 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hockey Recruits</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Hockey Recruits</h1>
-    <form id="sheet-form">
-      <input id="sheet-url" type="url" required
-             placeholder="Paste a public Google Sheet link (https://docs.google.com/spreadsheets/d/...)">
-      <button type="submit">Load</button>
-    </form>
-  </header>
-
-  <main>
-    <div id="toolbar" hidden>
-      <input id="search" type="search" placeholder="Filter rows…">
-      <span id="count"></span>
-    </div>
-    <p id="status">Paste a link to a Google Sheet that is shared as “Anyone with the link can view”.</p>
-    <div id="table-wrap"></div>
-  </main>
-
-  <script src="app.js"></script>
-</body>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hockey Recruits</title>
+    <script>
+      // Apply the saved theme before first paint to avoid a flash; dark is the default.
+      try { if (localStorage.getItem("theme") === "light") document.documentElement.classList.remove("dark") } catch {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
