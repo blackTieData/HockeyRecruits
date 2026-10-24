@@ -1,7 +1,12 @@
+import { useEffect, useMemo, useState } from "react"
 import { ArrowDown, ArrowUp } from "lucide-react"
 import {
   Table, TableBody, TableCell, TableHead, TableHeader, TableRow,
 } from "@/components/ui/table"
+import { KeyIcon } from "@/components/key-icon"
+import { TeamLogo } from "@/components/team-logo"
+import { columnWidths, ICON_WIDTH, LOGO_WIDTH } from "@/lib/column-widths"
+import { schoolLogo, teamLogo } from "@/lib/logos"
 import { cn } from "@/lib/utils"
 import type { Row } from "@/lib/sheet"
 
@@ -10,6 +15,7 @@ export type Sort = { col: number; dir: 1 | -1 } | null
 type Props = {
   headers: string[]
   rows: Row[]
+  allRows: Row[] // column widths come from every row, so they don't jump as filters change
   visibleCols: number[]
   sort: Sort
   onSort: (col: number) => void
@@ -29,11 +35,38 @@ function CellContent({ value }: { value: string }) {
   return value
 }
 
-export function RecruitsTable({ headers, rows, visibleCols, sort, onSort, highlighted, onToggleRow }: Props) {
+// Key icons shown after a cell's text: verification and commitment flags by the player's name,
+// the team note by the current team.
+const ICON_COLS: Record<string, string[]> = {
+  "Player": ["Verification", "Commitment"],
+  "Current Team": ["Team Note"],
+}
+
+// Logos shown before a cell's text.
+const LOGO_COLS: Record<string, (value: string) => ReturnType<typeof schoolLogo>> = {
+  "School": schoolLogo,
+  "Current Team": teamLogo,
+}
+
+export function RecruitsTable({ headers, rows, allRows, visibleCols, sort, onSort, highlighted, onToggleRow }: Props) {
+  // Measure text with the real font: re-measure once web fonts have loaded.
+  const [fontsReady, setFontsReady] = useState(document.fonts.status === "loaded")
+  useEffect(() => { document.fonts.ready.then(() => setFontsReady(true)) }, [])
+  const widths = useMemo(() => columnWidths(headers, allRows, (header, row) => {
+    const logo = LOGO_COLS[header] && row.cells[headers.indexOf(header)] ? LOGO_WIDTH : 0
+    const icons = (ICON_COLS[header] ?? []).filter(h => row.cells[headers.indexOf(h)]).length * ICON_WIDTH
+    return logo + icons
+  // fontsReady is only a re-measure trigger.
+  }), [headers, allRows, fontsReady])
+
   return (
     // The table container scrolls both ways so the header can stay pinned while scrolling rows.
     <div className="rounded-lg border bg-card [&_[data-slot=table-container]]:max-h-[70vh] [&_[data-slot=table-container]]:overflow-auto">
-      <Table>
+      {/* Fixed layout with explicit widths; the table is as wide as its columns, not the container. */}
+      <Table className="w-max table-fixed" style={{ width: visibleCols.reduce((n, c) => n + widths[c], 0) }}>
+        <colgroup>
+          {visibleCols.map(col => <col key={col} style={{ width: widths[col] }} />)}
+        </colgroup>
         <TableHeader className="sticky top-0 z-10 bg-card shadow-[inset_0_-1px_0_var(--border)]">
           <TableRow className="hover:bg-transparent">
             {visibleCols.map(col => {
@@ -42,7 +75,7 @@ export function RecruitsTable({ headers, rows, visibleCols, sort, onSort, highli
                 <TableHead key={col}
                   aria-sort={active ? (sort.dir === 1 ? "ascending" : "descending") : undefined}>
                   <button type="button" onClick={() => onSort(col)}
-                    className="inline-flex items-center gap-1 font-medium hover:text-foreground">
+                    className="inline-flex max-w-full items-center gap-1 font-medium hover:text-foreground">
                     {headers[col]}
                     {active && (sort.dir === 1 ? <ArrowUp className="size-3.5" /> : <ArrowDown className="size-3.5" />)}
                   </button>
@@ -65,8 +98,18 @@ export function RecruitsTable({ headers, rows, visibleCols, sort, onSort, highli
                 {visibleCols.map(col => (
                   // Long cells (e.g. player notes) are cut off with an ellipsis; hover shows the full text.
                   <TableCell key={col} title={row.cells[col] || undefined}
-                    className={cn("max-w-72 truncate", headers[col] === "Player" && "font-medium")}>
-                    <CellContent value={row.cells[col] ?? ""} />
+                    className={cn("truncate", headers[col] === "Player" && "font-medium")}>
+                    {ICON_COLS[headers[col]] || LOGO_COLS[headers[col]] ? (
+                      <span className="flex min-w-0 items-center gap-1.5">
+                        {LOGO_COLS[headers[col]] && row.cells[col] &&
+                          <TeamLogo logo={LOGO_COLS[headers[col]](row.cells[col])} />}
+                        <span className="min-w-0 truncate"><CellContent value={row.cells[col] ?? ""} /></span>
+                        {ICON_COLS[headers[col]]?.map(h => {
+                          const label = row.cells[headers.indexOf(h)]
+                          return label ? <KeyIcon key={h} label={label} /> : null
+                        })}
+                      </span>
+                    ) : <CellContent value={row.cells[col] ?? ""} />}
                   </TableCell>
                 ))}
               </TableRow>

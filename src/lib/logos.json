@@ -1,0 +1,1771 @@
+{
+ "ncaa": [
+  {
+   "names": [
+    "Alaska Anchorage",
+    "Alaska Anchorage Seawolves"
+   ],
+   "src": "/logos/ncaa/1.png"
+  },
+  {
+   "names": [
+    "Arizona State",
+    "Arizona State Sun Devils"
+   ],
+   "src": "/logos/ncaa/9.png"
+  },
+  {
+   "names": [
+    "Arizona",
+    "Arizona Wildcats"
+   ],
+   "src": "/logos/ncaa/12.png"
+  },
+  {
+   "names": [
+    "UConn",
+    "UConn Huskies"
+   ],
+   "src": "/logos/ncaa/41.png"
+  },
+  {
+   "names": [
+    "Yale",
+    "Yale Bulldogs"
+   ],
+   "src": "/logos/ncaa/43.png"
+  },
+  {
+   "names": [
+    "Notre Dame",
+    "Notre Dame Fighting Irish"
+   ],
+   "src": "/logos/ncaa/87.png",
+   "dark": "/logos/ncaa/87-dark.png"
+  },
+  {
+   "names": [
+    "Boston College",
+    "Boston College Eagles"
+   ],
+   "src": "/logos/ncaa/103.png",
+   "dark": "/logos/ncaa/103-dark.png"
+  },
+  {
+   "names": [
+    "Boston University",
+    "Boston University Terriers"
+   ],
+   "src": "/logos/ncaa/104.png"
+  },
+  {
+   "names": [
+    "Holy Cross",
+    "Holy Cross Crusaders"
+   ],
+   "src": "/logos/ncaa/107.png"
+  },
+  {
+   "names": [
+    "Harvard",
+    "Harvard Crimson"
+   ],
+   "src": "/logos/ncaa/108.png"
+  },
+  {
+   "names": [
+    "Northeastern",
+    "Northeastern Huskies"
+   ],
+   "src": "/logos/ncaa/111.png"
+  },
+  {
+   "names": [
+    "Massachusetts",
+    "Massachusetts Minutemen",
+    "UMass Minutemen"
+   ],
+   "src": "/logos/ncaa/113.png",
+   "dark": "/logos/ncaa/113-dark.png"
+  },
+  {
+   "names": [
+    "Augsburg",
+    "Augsburg Auggies"
+   ],
+   "src": "/logos/ncaa/124.png"
+  },
+  {
+   "names": [
+    "Michigan State",
+    "Michigan State Spartans"
+   ],
+   "src": "/logos/ncaa/127.png",
+   "dark": "/logos/ncaa/127-dark.png"
+  },
+  {
+   "names": [
+    "Northern Michigan",
+    "Northern Michigan Wildcats"
+   ],
+   "src": "/logos/ncaa/128.png"
+  },
+  {
+   "names": [
+    "Michigan",
+    "Michigan Wolverines"
+   ],
+   "src": "/logos/ncaa/130.png",
+   "dark": "/logos/ncaa/130-dark.png"
+  },
+  {
+   "names": [
+    "Wayne St.",
+    "Wayne St. Falcons"
+   ],
+   "src": "/logos/ncaa/131.png"
+  },
+  {
+   "names": [
+    "Bemidji State",
+    "Bemidji State Beavers"
+   ],
+   "src": "/logos/ncaa/132.png"
+  },
+  {
+   "names": [
+    "Minnesota Duluth",
+    "Minnesota Duluth Bulldogs"
+   ],
+   "src": "/logos/ncaa/134.png",
+   "dark": "/logos/ncaa/134-dark.png"
+  },
+  {
+   "names": [
+    "Minnesota",
+    "Minnesota Golden Gophers"
+   ],
+   "src": "/logos/ncaa/135.png"
+  },
+  {
+   "names": [
+    "North Dakota",
+    "North Dakota Fighting Hawks"
+   ],
+   "src": "/logos/ncaa/155.png"
+  },
+  {
+   "names": [
+    "Dartmouth",
+    "Dartmouth Big Green"
+   ],
+   "src": "/logos/ncaa/159.png"
+  },
+  {
+   "names": [
+    "New Hampshire",
+    "New Hampshire Wildcats"
+   ],
+   "src": "/logos/ncaa/160.png"
+  },
+  {
+   "names": [
+    "Princeton",
+    "Princeton Tigers"
+   ],
+   "src": "/logos/ncaa/163.png"
+  },
+  {
+   "names": [
+    "Cornell",
+    "Cornell Big Red"
+   ],
+   "src": "/logos/ncaa/172.png"
+  },
+  {
+   "names": [
+    "RIT",
+    "RIT Tigers"
+   ],
+   "src": "/logos/ncaa/178.png"
+  },
+  {
+   "names": [
+    "SUNY Potsdam",
+    "SUNY Potsdam SUNY-POTSDAM"
+   ],
+   "src": "/logos/ncaa/182.png"
+  },
+  {
+   "names": [
+    "Bowling Green",
+    "Bowling Green Falcons"
+   ],
+   "src": "/logos/ncaa/189.png",
+   "dark": "/logos/ncaa/189-dark.png"
+  },
+  {
+   "names": [
+    "Miami (OH)",
+    "Miami (OH) RedHawks",
+    "Miami Ohio RedHawks"
+   ],
+   "src": "/logos/ncaa/193.png",
+   "dark": "/logos/ncaa/193-dark.png"
+  },
+  {
+   "names": [
+    "Ohio State",
+    "Ohio State Buckeyes"
+   ],
+   "src": "/logos/ncaa/194.png",
+   "dark": "/logos/ncaa/194-dark.png"
+  },
+  {
+   "names": [
+    "Ohio",
+    "Ohio Bobcats"
+   ],
+   "src": "/logos/ncaa/195.png"
+  },
+  {
+   "names": [
+    "Penn State",
+    "Penn State Nittany Lions"
+   ],
+   "src": "/logos/ncaa/213.png",
+   "dark": "/logos/ncaa/213-dark.png"
+  },
+  {
+   "names": [
+    "Brown",
+    "Brown Bears"
+   ],
+   "src": "/logos/ncaa/225.png"
+  },
+  {
+   "names": [
+    "Saint Michael's",
+    "Saint Michael's Purple Knights"
+   ],
+   "src": "/logos/ncaa/260.png"
+  },
+  {
+   "names": [
+    "Vermont",
+    "Vermont Catamounts"
+   ],
+   "src": "/logos/ncaa/261.png",
+   "dark": "/logos/ncaa/261-dark.png"
+  },
+  {
+   "names": [
+    "Wisconsin",
+    "Wisconsin Badgers"
+   ],
+   "src": "/logos/ncaa/275.png"
+  },
+  {
+   "names": [
+    "Stonehill",
+    "Stonehill Skyhawks"
+   ],
+   "src": "/logos/ncaa/284.png"
+  },
+  {
+   "names": [
+    "Lake Superior State",
+    "Lake Superior State Lakers"
+   ],
+   "src": "/logos/ncaa/285.png",
+   "dark": "/logos/ncaa/285-dark.png"
+  },
+  {
+   "names": [
+    "Alaska",
+    "Alaska Fairbanks Nanooks",
+    "Alaska Nanooks"
+   ],
+   "src": "/logos/ncaa/298.png"
+  },
+  {
+   "names": [
+    "Maine",
+    "Maine Black Bears"
+   ],
+   "src": "/logos/ncaa/311.png"
+  },
+  {
+   "names": [
+    "Iona",
+    "Iona Gaels"
+   ],
+   "src": "/logos/ncaa/314.png"
+  },
+  {
+   "names": [
+    "Niagara",
+    "Niagara Purple Eagles"
+   ],
+   "src": "/logos/ncaa/315.png"
+  },
+  {
+   "names": [
+    "Army",
+    "Army Black Knights"
+   ],
+   "src": "/logos/ncaa/349.png"
+  },
+  {
+   "names": [
+    "UMASS DARTMOUTH",
+    "UMass Dartmouth"
+   ],
+   "src": "/logos/ncaa/379.png"
+  },
+  {
+   "names": [
+    "Post",
+    "Post Eagles"
+   ],
+   "src": "/logos/ncaa/430.png"
+  },
+  {
+   "names": [
+    "Air Force",
+    "Air Force Falcons"
+   ],
+   "src": "/logos/ncaa/2005.png",
+   "dark": "/logos/ncaa/2005-dark.png"
+  },
+  {
+   "names": [
+    "American International",
+    "American International Yellow Jackets"
+   ],
+   "src": "/logos/ncaa/2022.png"
+  },
+  {
+   "names": [
+    "Assumption",
+    "Assumption Greyhounds"
+   ],
+   "src": "/logos/ncaa/2038.png"
+  },
+  {
+   "names": [
+    "Augustana (SD)",
+    "Augustana (SD) Vikings",
+    "Augustana Vikings"
+   ],
+   "src": "/logos/ncaa/2043.png"
+  },
+  {
+   "names": [
+    "Bentley",
+    "Bentley Falcons"
+   ],
+   "src": "/logos/ncaa/2060.png"
+  },
+  {
+   "names": [
+    "Canisius",
+    "Canisius Golden Griffins"
+   ],
+   "src": "/logos/ncaa/2099.png"
+  },
+  {
+   "names": [
+    "Clarkson",
+    "Clarkson Golden Knights"
+   ],
+   "src": "/logos/ncaa/2137.png"
+  },
+  {
+   "names": [
+    "Colgate",
+    "Colgate Raiders"
+   ],
+   "src": "/logos/ncaa/2142.png",
+   "dark": "/logos/ncaa/2142-dark.png"
+  },
+  {
+   "names": [
+    "Colorado College",
+    "Colorado College Tigers"
+   ],
+   "src": "/logos/ncaa/2144.png"
+  },
+  {
+   "names": [
+    "Concordia (MN)",
+    "Concordia (MN) Cobbers"
+   ],
+   "src": "/logos/ncaa/2152.png"
+  },
+  {
+   "names": [
+    "Denver",
+    "Denver Pioneers"
+   ],
+   "src": "/logos/ncaa/2172.png",
+   "dark": "/logos/ncaa/2172-dark.png"
+  },
+  {
+   "names": [
+    "Fairfield",
+    "Fairfield Badgers"
+   ],
+   "src": "/logos/ncaa/2217.png"
+  },
+  {
+   "names": [
+    "Ferris State",
+    "Ferris State Bulldogs"
+   ],
+   "src": "/logos/ncaa/2222.png"
+  },
+  {
+   "names": [
+    "Findlay",
+    "Findlay Falcons"
+   ],
+   "src": "/logos/ncaa/2224.png"
+  },
+  {
+   "names": [
+    "Liberty",
+    "Liberty Flames"
+   ],
+   "src": "/logos/ncaa/2335.png",
+   "dark": "/logos/ncaa/2335-dark.png"
+  },
+  {
+   "names": [
+    "UMass Lowell",
+    "UMass Lowell River Hawks"
+   ],
+   "src": "/logos/ncaa/2349.png"
+  },
+  {
+   "names": [
+    "Minnesota State",
+    "Minnesota State Mavericks"
+   ],
+   "src": "/logos/ncaa/2364.png"
+  },
+  {
+   "names": [
+    "Mercyhurst",
+    "Mercyhurst Lakers"
+   ],
+   "src": "/logos/ncaa/2385.png"
+  },
+  {
+   "names": [
+    "Michigan Tech",
+    "Michigan Tech Huskies"
+   ],
+   "src": "/logos/ncaa/2392.png"
+  },
+  {
+   "names": [
+    "Middlebury",
+    "Middlebury Panthers"
+   ],
+   "src": "/logos/ncaa/2394.png"
+  },
+  {
+   "names": [
+    "Nebraska Omaha Mavericks",
+    "Omaha",
+    "Omaha Mavericks"
+   ],
+   "src": "/logos/ncaa/2437.png"
+  },
+  {
+   "names": [
+    "Providence",
+    "Providence Friars"
+   ],
+   "src": "/logos/ncaa/2507.png",
+   "dark": "/logos/ncaa/2507-dark.png"
+  },
+  {
+   "names": [
+    "Quinnipiac",
+    "Quinnipiac Bobcats"
+   ],
+   "src": "/logos/ncaa/2514.png"
+  },
+  {
+   "names": [
+    "Robert Morris",
+    "Robert Morris Colonials"
+   ],
+   "src": "/logos/ncaa/2523.png"
+  },
+  {
+   "names": [
+    "RPI Engineers",
+    "Rensselaer",
+    "Rensselaer Engineers"
+   ],
+   "src": "/logos/ncaa/2528.png",
+   "dark": "/logos/ncaa/2528-dark.png"
+  },
+  {
+   "names": [
+    "Sacred Heart",
+    "Sacred Heart Pioneers"
+   ],
+   "src": "/logos/ncaa/2529.png"
+  },
+  {
+   "names": [
+    "St. Cloud Huskies",
+    "St. Cloud State",
+    "St. Cloud State Huskies"
+   ],
+   "src": "/logos/ncaa/2594.png"
+  },
+  {
+   "names": [
+    "Tennessee State Tigers"
+   ],
+   "src": "/logos/ncaa/2634.png"
+  },
+  {
+   "names": [
+    "Trine",
+    "Trine Thunder"
+   ],
+   "src": "/logos/ncaa/2651.png"
+  },
+  {
+   "names": [
+    "Western Michigan",
+    "Western Michigan Broncos"
+   ],
+   "src": "/logos/ncaa/2711.png"
+  },
+  {
+   "names": [
+    "Williams",
+    "Williams Ephs"
+   ],
+   "src": "/logos/ncaa/2731.png"
+  },
+  {
+   "names": [
+    "Wisconsin Eau Claire",
+    "Wisconsin Eau Claire Blugolds"
+   ],
+   "src": "/logos/ncaa/2738.png"
+  },
+  {
+   "names": [
+    "Wisconsin Stout",
+    "Wisconsin Stout Blue Devils"
+   ],
+   "src": "/logos/ncaa/2744.png"
+  },
+  {
+   "names": [
+    "Merrimack",
+    "Merrimack Warriors"
+   ],
+   "src": "/logos/ncaa/2771.png"
+  },
+  {
+   "names": [
+    "St. Lawrence",
+    "St. Lawrence Saints"
+   ],
+   "src": "/logos/ncaa/2779.png"
+  },
+  {
+   "names": [
+    "Brockport",
+    "Brockport Golden Eagles"
+   ],
+   "src": "/logos/ncaa/2781.png",
+   "dark": "/logos/ncaa/2781-dark.png"
+  },
+  {
+   "names": [
+    "Union",
+    "Union Garnet Chargers"
+   ],
+   "src": "/logos/ncaa/2785.png",
+   "dark": "/logos/ncaa/2785-dark.png"
+  },
+  {
+   "names": [
+    "Bethel College Minnesota",
+    "Bethel College Minnesota Falcons"
+   ],
+   "src": "/logos/ncaa/2802.png"
+  },
+  {
+   "names": [
+    "Lindenwood",
+    "Lindenwood Lions"
+   ],
+   "src": "/logos/ncaa/2815.png"
+  },
+  {
+   "names": [
+    "Saint Anselm",
+    "Saint Anselm Hawks"
+   ],
+   "src": "/logos/ncaa/2830.png"
+  },
+  {
+   "names": [
+    "St. Thomas",
+    "St. Thomas Tommies"
+   ],
+   "src": "/logos/ncaa/2900.png"
+  },
+  {
+   "names": [
+    "Long Island Sharks",
+    "Long Island University",
+    "Long Island University Sharks"
+   ],
+   "src": "/logos/ncaa/110133.png"
+  },
+  {
+   "names": [
+    "FRANKLIN PIERCE",
+    "Franklin Pierce"
+   ],
+   "src": "/logos/ncaa/112334.png"
+  },
+  {
+   "names": [
+    "St. Michael'S College",
+    "St. Michael'S College Purple Knights"
+   ],
+   "src": "/logos/ncaa/127963.png"
+  }
+ ],
+ "teams": [
+  {
+   "name": "Barrie Colts",
+   "league": "OHL",
+   "aliases": [],
+   "src": "/logos/ohl/barrie-colts.png"
+  },
+  {
+   "name": "Brampton Steelheads",
+   "league": "OHL",
+   "aliases": [],
+   "src": "/logos/ohl/brampton-steelheads.png"
+  },
+  {
+   "name": "Brantford Bulldogs",
+   "league": "OHL",
+   "aliases": [],
+   "src": "/logos/ohl/brantford-bulldogs.png"
+  },
+  {
+   "name": "Erie Otters",
+   "league": "OHL",
+   "aliases": [],
+   "src": "/logos/ohl/erie-otters.png"
+  },
+  {
+   "name": "Flint Firebirds",
+   "league": "OHL",
+   "aliases": [],
+   "src": "/logos/ohl/flint-firebirds.png"
+  },
+  {
+   "name": "Guelph Storm",
+   "league": "OHL",
+   "aliases": [],
+   "src": "/logos/ohl/guelph-storm.png"
+  },
+  {
+   "name": "Kingston Frontenacs",
+   "league": "OHL",
+   "aliases": [],
+   "src": "/logos/ohl/kingston-frontenacs.png"
+  },
+  {
+   "name": "Kitchener Rangers",
+   "league": "OHL",
+   "aliases": [],
+   "src": "/logos/ohl/kitchener-rangers.png"
+  },
+  {
+   "name": "London Knights",
+   "league": "OHL",
+   "aliases": [],
+   "src": "/logos/ohl/london-knights.png"
+  },
+  {
+   "name": "Niagara IceDogs",
+   "league": "OHL",
+   "aliases": [],
+   "src": "/logos/ohl/niagara-icedogs.png"
+  },
+  {
+   "name": "North Bay Battalion",
+   "league": "OHL",
+   "aliases": [],
+   "src": "/logos/ohl/north-bay-battalion.png"
+  },
+  {
+   "name": "Oshawa Generals",
+   "league": "OHL",
+   "aliases": [],
+   "src": "/logos/ohl/oshawa-generals.png"
+  },
+  {
+   "name": "Ottawa 67's",
+   "league": "OHL",
+   "aliases": [],
+   "src": "/logos/ohl/ottawa-67-s.png"
+  },
+  {
+   "name": "Owen Sound Attack",
+   "league": "OHL",
+   "aliases": [],
+   "src": "/logos/ohl/owen-sound-attack.png"
+  },
+  {
+   "name": "Peterborough Petes",
+   "league": "OHL",
+   "aliases": [],
+   "src": "/logos/ohl/peterborough-petes.png"
+  },
+  {
+   "name": "Saginaw Spirit",
+   "league": "OHL",
+   "aliases": [],
+   "src": "/logos/ohl/saginaw-spirit.png"
+  },
+  {
+   "name": "Sarnia Sting",
+   "league": "OHL",
+   "aliases": [],
+   "src": "/logos/ohl/sarnia-sting.png"
+  },
+  {
+   "name": "Soo Greyhounds",
+   "league": "OHL",
+   "aliases": [],
+   "src": "/logos/ohl/soo-greyhounds.png"
+  },
+  {
+   "name": "Sudbury Wolves",
+   "league": "OHL",
+   "aliases": [],
+   "src": "/logos/ohl/sudbury-wolves.png"
+  },
+  {
+   "name": "Windsor Spitfires",
+   "league": "OHL",
+   "aliases": [],
+   "src": "/logos/ohl/windsor-spitfires.png"
+  },
+  {
+   "name": "Brandon Wheat Kings",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/brandon-wheat-kings.png"
+  },
+  {
+   "name": "Calgary Hitmen",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/calgary-hitmen.png"
+  },
+  {
+   "name": "Edmonton Oil Kings",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/edmonton-oil-kings.png"
+  },
+  {
+   "name": "Everett Silvertips",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/everett-silvertips.png"
+  },
+  {
+   "name": "Kamloops Blazers",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/kamloops-blazers.png"
+  },
+  {
+   "name": "Kelowna Rockets",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/kelowna-rockets.png"
+  },
+  {
+   "name": "Lethbridge Hurricanes",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/lethbridge-hurricanes.png"
+  },
+  {
+   "name": "Medicine Hat Tigers",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/medicine-hat-tigers.png"
+  },
+  {
+   "name": "Moose Jaw Warriors",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/moose-jaw-warriors.png"
+  },
+  {
+   "name": "Penticton Vees",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/penticton-vees.png"
+  },
+  {
+   "name": "Portland Winterhawks",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/portland-winterhawks.png"
+  },
+  {
+   "name": "Prince Albert Raiders",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/prince-albert-raiders.png"
+  },
+  {
+   "name": "Prince George Cougars",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/prince-george-cougars.png"
+  },
+  {
+   "name": "Red Deer Rebels",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/red-deer-rebels.png"
+  },
+  {
+   "name": "Regina Pats",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/regina-pats.png"
+  },
+  {
+   "name": "Saskatoon Blades",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/saskatoon-blades.png"
+  },
+  {
+   "name": "Seattle Thunderbirds",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/seattle-thunderbirds.png"
+  },
+  {
+   "name": "Spokane Chiefs",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/spokane-chiefs.png"
+  },
+  {
+   "name": "Swift Current Broncos",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/swift-current-broncos.png"
+  },
+  {
+   "name": "Tri-City Americans",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/tri-city-americans.png"
+  },
+  {
+   "name": "Vancouver Giants",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/vancouver-giants.png"
+  },
+  {
+   "name": "Victoria Royals",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/victoria-royals.png"
+  },
+  {
+   "name": "Wenatchee Wild",
+   "league": "WHL",
+   "aliases": [],
+   "src": "/logos/whl/wenatchee-wild.png"
+  },
+  {
+   "name": "Baie-Comeau Drakkar",
+   "league": "QMJHL",
+   "aliases": [],
+   "src": "/logos/qmjhl/baie-comeau-drakkar.png"
+  },
+  {
+   "name": "Blainville-Boisbriand Armada",
+   "league": "QMJHL",
+   "aliases": [],
+   "src": "/logos/qmjhl/blainville-boisbriand-armada.png"
+  },
+  {
+   "name": "Cape Breton Eagles",
+   "league": "QMJHL",
+   "aliases": [],
+   "src": "/logos/qmjhl/cape-breton-eagles.png"
+  },
+  {
+   "name": "Charlottetown Islanders",
+   "league": "QMJHL",
+   "aliases": [],
+   "src": "/logos/qmjhl/charlottetown-islanders.png"
+  },
+  {
+   "name": "Chicoutimi Saguenéens",
+   "league": "QMJHL",
+   "aliases": [],
+   "src": "/logos/qmjhl/chicoutimi-saguen-ens.png"
+  },
+  {
+   "name": "Drummondville Voltigeurs",
+   "league": "QMJHL",
+   "aliases": [],
+   "src": "/logos/qmjhl/drummondville-voltigeurs.png"
+  },
+  {
+   "name": "Gatineau Olympiques",
+   "league": "QMJHL",
+   "aliases": [],
+   "src": "/logos/qmjhl/gatineau-olympiques.png"
+  },
+  {
+   "name": "Halifax Mooseheads",
+   "league": "QMJHL",
+   "aliases": [],
+   "src": "/logos/qmjhl/halifax-mooseheads.png"
+  },
+  {
+   "name": "Moncton Wildcats",
+   "league": "QMJHL",
+   "aliases": [],
+   "src": "/logos/qmjhl/moncton-wildcats.png"
+  },
+  {
+   "name": "Newfoundland Regiment",
+   "league": "QMJHL",
+   "aliases": [],
+   "src": "/logos/qmjhl/newfoundland-regiment.png"
+  },
+  {
+   "name": "Québec Remparts",
+   "league": "QMJHL",
+   "aliases": [],
+   "src": "/logos/qmjhl/qu-bec-remparts.png"
+  },
+  {
+   "name": "Rimouski Océanic",
+   "league": "QMJHL",
+   "aliases": [],
+   "src": "/logos/qmjhl/rimouski-oc-anic.png"
+  },
+  {
+   "name": "Rouyn-Noranda Huskies",
+   "league": "QMJHL",
+   "aliases": [],
+   "src": "/logos/qmjhl/rouyn-noranda-huskies.png"
+  },
+  {
+   "name": "Saint John Sea Dogs",
+   "league": "QMJHL",
+   "aliases": [],
+   "src": "/logos/qmjhl/saint-john-sea-dogs.png"
+  },
+  {
+   "name": "Shawinigan Cataractes",
+   "league": "QMJHL",
+   "aliases": [],
+   "src": "/logos/qmjhl/shawinigan-cataractes.png"
+  },
+  {
+   "name": "Sherbrooke Phoenix",
+   "league": "QMJHL",
+   "aliases": [],
+   "src": "/logos/qmjhl/sherbrooke-phoenix.png"
+  },
+  {
+   "name": "Val-d'Or Foreurs",
+   "league": "QMJHL",
+   "aliases": [],
+   "src": "/logos/qmjhl/val-d-or-foreurs.png"
+  },
+  {
+   "name": "Victoriaville Tigres",
+   "league": "QMJHL",
+   "aliases": [],
+   "src": "/logos/qmjhl/victoriaville-tigres.png"
+  },
+  {
+   "name": "Powell River Kings",
+   "league": "BCHL",
+   "aliases": [],
+   "src": "/logos/bchl/powell-river-kings.png"
+  },
+  {
+   "name": "Coquitlam Express",
+   "league": "BCHL",
+   "aliases": [],
+   "src": "/logos/bchl/coquitlam-express.png"
+  },
+  {
+   "name": "Cowichan Valley Capitals",
+   "league": "BCHL",
+   "aliases": [],
+   "src": "/logos/bchl/cowichan-valley-capitals.png"
+  },
+  {
+   "name": "Surrey Eagles",
+   "league": "BCHL",
+   "aliases": [],
+   "src": "/logos/bchl/surrey-eagles.png"
+  },
+  {
+   "name": "Chilliwack Chiefs",
+   "league": "BCHL",
+   "aliases": [],
+   "src": "/logos/bchl/chilliwack-chiefs.png"
+  },
+  {
+   "name": "Prince George Spruce Kings",
+   "league": "BCHL",
+   "aliases": [],
+   "src": "/logos/bchl/prince-george-spruce-kings.png"
+  },
+  {
+   "name": "Alberni Valley Bulldogs",
+   "league": "BCHL",
+   "aliases": [],
+   "src": "/logos/bchl/alberni-valley-bulldogs.png"
+  },
+  {
+   "name": "Langley Rivermen",
+   "league": "BCHL",
+   "aliases": [],
+   "src": "/logos/bchl/langley-rivermen.png"
+  },
+  {
+   "name": "Victoria Grizzlies",
+   "league": "BCHL",
+   "aliases": [],
+   "src": "/logos/bchl/victoria-grizzlies.png"
+  },
+  {
+   "name": "West Kelowna Warriors",
+   "league": "BCHL",
+   "aliases": [],
+   "src": "/logos/bchl/west-kelowna-warriors.png"
+  },
+  {
+   "name": "Salmon Arm Silverbacks",
+   "league": "BCHL",
+   "aliases": [],
+   "src": "/logos/bchl/salmon-arm-silverbacks.png"
+  },
+  {
+   "name": "Vernon Vipers",
+   "league": "BCHL",
+   "aliases": [],
+   "src": "/logos/bchl/vernon-vipers.png"
+  },
+  {
+   "name": "Trail Smoke Eaters",
+   "league": "BCHL",
+   "aliases": [],
+   "src": "/logos/bchl/trail-smoke-eaters.png"
+  },
+  {
+   "name": "Nanaimo Clippers",
+   "league": "BCHL",
+   "aliases": [],
+   "src": "/logos/bchl/nanaimo-clippers.png"
+  },
+  {
+   "name": "Cranbrook Bucks",
+   "league": "BCHL",
+   "aliases": [],
+   "src": "/logos/bchl/cranbrook-bucks.png"
+  },
+  {
+   "name": "Brooks Bandits",
+   "league": "BCHL",
+   "aliases": [],
+   "src": "/logos/bchl/brooks-bandits.png"
+  },
+  {
+   "name": "Blackfalds Bulldogs",
+   "league": "BCHL",
+   "aliases": [],
+   "src": "/logos/bchl/blackfalds-bulldogs.png"
+  },
+  {
+   "name": "Okotoks Oilers",
+   "league": "BCHL",
+   "aliases": [],
+   "src": "/logos/bchl/okotoks-oilers.png"
+  },
+  {
+   "name": "Sherwood Park Crusaders",
+   "league": "BCHL",
+   "aliases": [],
+   "src": "/logos/bchl/sherwood-park-crusaders.png"
+  },
+  {
+   "name": "Spruce Grove Saints",
+   "league": "BCHL",
+   "aliases": [],
+   "src": "/logos/bchl/spruce-grove-saints.png"
+  },
+  {
+   "name": "Buffalo Jr. Sabres",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/buffalo-jr-sabres.png"
+  },
+  {
+   "name": "Aurora Tigers",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/aurora-tigers.png"
+  },
+  {
+   "name": "Caledon Admirals",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/caledon-admirals.png"
+  },
+  {
+   "name": "King Rebellion",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/king-rebellion.png"
+  },
+  {
+   "name": "Burlington Cougars",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/burlington-cougars.png"
+  },
+  {
+   "name": "Cobourg Cougars",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/cobourg-cougars.png"
+  },
+  {
+   "name": "Collingwood Blues",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/collingwood-blues.png"
+  },
+  {
+   "name": "Georgetown Raiders",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/georgetown-raiders.png"
+  },
+  {
+   "name": "Toronto Warriors",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/toronto-warriors.png"
+  },
+  {
+   "name": "Lindsay Muskies",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/lindsay-muskies.png"
+  },
+  {
+   "name": "Leamington Flyers",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/leamington-flyers.png"
+  },
+  {
+   "name": "Markham Royals",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/markham-royals.png"
+  },
+  {
+   "name": "Milton Menace",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/milton-menace.png"
+  },
+  {
+   "name": "Mississauga Chargers",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/mississauga-chargers.png"
+  },
+  {
+   "name": "North York Rangers",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/north-york-rangers.png"
+  },
+  {
+   "name": "Oakville Blades",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/oakville-blades.png"
+  },
+  {
+   "name": "Pickering Panthers",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/pickering-panthers.png"
+  },
+  {
+   "name": "St. Michaels Buzzers",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/st-michaels-buzzers.png"
+  },
+  {
+   "name": "Stouffville Spirit",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/stouffville-spirit.png"
+  },
+  {
+   "name": "Newmarket Hurricanes",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/newmarket-hurricanes.png"
+  },
+  {
+   "name": "Toronto Patriots",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/toronto-patriots.png"
+  },
+  {
+   "name": "Trenton Golden Hawks",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/trenton-golden-hawks.png"
+  },
+  {
+   "name": "Wellington Dukes",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/wellington-dukes.png"
+  },
+  {
+   "name": "Niagara Falls Canucks",
+   "league": "OJHL",
+   "aliases": [],
+   "src": "/logos/ojhl/niagara-falls-canucks.png"
+  },
+  {
+   "name": "Bonnyville Pontiacs",
+   "league": "AJHL",
+   "aliases": [],
+   "src": "/logos/ajhl/bonnyville-pontiacs.png"
+  },
+  {
+   "name": "Calgary Canucks",
+   "league": "AJHL",
+   "aliases": [],
+   "src": "/logos/ajhl/calgary-canucks.png"
+  },
+  {
+   "name": "Camrose Kodiaks",
+   "league": "AJHL",
+   "aliases": [],
+   "src": "/logos/ajhl/camrose-kodiaks.png"
+  },
+  {
+   "name": "Canmore Eagles",
+   "league": "AJHL",
+   "aliases": [],
+   "src": "/logos/ajhl/canmore-eagles.png"
+  },
+  {
+   "name": "Drayton Valley Thunder",
+   "league": "AJHL",
+   "aliases": [],
+   "src": "/logos/ajhl/drayton-valley-thunder.png"
+  },
+  {
+   "name": "Drumheller Dragons",
+   "league": "AJHL",
+   "aliases": [],
+   "src": "/logos/ajhl/drumheller-dragons.png"
+  },
+  {
+   "name": "Fort McMurray Oil Barons",
+   "league": "AJHL",
+   "aliases": [],
+   "src": "/logos/ajhl/fort-mcmurray-oil-barons.png"
+  },
+  {
+   "name": "Grande Prairie Storm",
+   "league": "AJHL",
+   "aliases": [],
+   "src": "/logos/ajhl/grande-prairie-storm.png"
+  },
+  {
+   "name": "Lloydminster Bobcats",
+   "league": "AJHL",
+   "aliases": [],
+   "src": "/logos/ajhl/lloydminster-bobcats.png"
+  },
+  {
+   "name": "Olds Grizzlys",
+   "league": "AJHL",
+   "aliases": [],
+   "src": "/logos/ajhl/olds-grizzlys.png"
+  },
+  {
+   "name": "Whitecourt Wolverines",
+   "league": "AJHL",
+   "aliases": [],
+   "src": "/logos/ajhl/whitecourt-wolverines.png"
+  },
+  {
+   "name": "Devon Xtreme",
+   "league": "AJHL",
+   "aliases": [],
+   "src": "/logos/ajhl/devon-xtreme.png"
+  },
+  {
+   "name": "Dauphin Kings",
+   "league": "MJHL",
+   "aliases": [],
+   "src": "/logos/mjhl/dauphin-kings.png"
+  },
+  {
+   "name": "Neepawa Titans",
+   "league": "MJHL",
+   "aliases": [],
+   "src": "/logos/mjhl/neepawa-titans.png"
+  },
+  {
+   "name": "Northern Manitoba Blizzard",
+   "league": "MJHL",
+   "aliases": [],
+   "src": "/logos/mjhl/northern-manitoba-blizzard.png"
+  },
+  {
+   "name": "Portage Terriers",
+   "league": "MJHL",
+   "aliases": [],
+   "src": "/logos/mjhl/portage-terriers.png"
+  },
+  {
+   "name": "Selkirk Steelers",
+   "league": "MJHL",
+   "aliases": [],
+   "src": "/logos/mjhl/selkirk-steelers.png"
+  },
+  {
+   "name": "Steinbach Pistons",
+   "league": "MJHL",
+   "aliases": [],
+   "src": "/logos/mjhl/steinbach-pistons.png"
+  },
+  {
+   "name": "Swan Valley Stampeders",
+   "league": "MJHL",
+   "aliases": [],
+   "src": "/logos/mjhl/swan-valley-stampeders.png"
+  },
+  {
+   "name": "Virden Oil Capitals",
+   "league": "MJHL",
+   "aliases": [],
+   "src": "/logos/mjhl/virden-oil-capitals.png"
+  },
+  {
+   "name": "Waywayseecappo Wolverines",
+   "league": "MJHL",
+   "aliases": [],
+   "src": "/logos/mjhl/waywayseecappo-wolverines.png"
+  },
+  {
+   "name": "Winkler Flyers",
+   "league": "MJHL",
+   "aliases": [],
+   "src": "/logos/mjhl/winkler-flyers.png"
+  },
+  {
+   "name": "Winnipeg Blues",
+   "league": "MJHL",
+   "aliases": [],
+   "src": "/logos/mjhl/winnipeg-blues.png"
+  },
+  {
+   "name": "Winnipeg Monarchs",
+   "league": "MJHL",
+   "aliases": [],
+   "src": "/logos/mjhl/winnipeg-monarchs.png"
+  },
+  {
+   "name": "Niverville Nighthawks",
+   "league": "MJHL",
+   "aliases": [],
+   "src": "/logos/mjhl/niverville-nighthawks.png"
+  },
+  {
+   "name": "Cedar Rapids RoughRiders",
+   "league": "USHL",
+   "aliases": [],
+   "src": "/logos/ushl/cedar-rapids-roughriders.svg"
+  },
+  {
+   "name": "Chicago Steel",
+   "league": "USHL",
+   "aliases": [],
+   "src": "/logos/ushl/chicago-steel.svg"
+  },
+  {
+   "name": "Dubuque Fighting Saints",
+   "league": "USHL",
+   "aliases": [],
+   "src": "/logos/ushl/dubuque-fighting-saints.svg"
+  },
+  {
+   "name": "Green Bay Gamblers",
+   "league": "USHL",
+   "aliases": [],
+   "src": "/logos/ushl/green-bay-gamblers.svg"
+  },
+  {
+   "name": "Madison Capitols",
+   "league": "USHL",
+   "aliases": [],
+   "src": "/logos/ushl/madison-capitols.svg"
+  },
+  {
+   "name": "Muskegon Lumberjacks",
+   "league": "USHL",
+   "aliases": [],
+   "src": "/logos/ushl/muskegon-lumberjacks.svg"
+  },
+  {
+   "name": "USNTDP",
+   "league": "USHL",
+   "aliases": [
+    "USNTDP U18",
+    "USNTDP U17",
+    "Team USA"
+   ],
+   "src": "/logos/ushl/usntdp.svg"
+  },
+  {
+   "name": "Youngstown Phantoms",
+   "league": "USHL",
+   "aliases": [],
+   "src": "/logos/ushl/youngstown-phantoms.svg"
+  },
+  {
+   "name": "Des Moines Buccaneers",
+   "league": "USHL",
+   "aliases": [],
+   "src": "/logos/ushl/des-moines-buccaneers.svg"
+  },
+  {
+   "name": "Fargo Force",
+   "league": "USHL",
+   "aliases": [],
+   "src": "/logos/ushl/fargo-force.svg"
+  },
+  {
+   "name": "Lincoln Stars",
+   "league": "USHL",
+   "aliases": [],
+   "src": "/logos/ushl/lincoln-stars.svg"
+  },
+  {
+   "name": "Omaha Lancers",
+   "league": "USHL",
+   "aliases": [],
+   "src": "/logos/ushl/omaha-lancers.svg"
+  },
+  {
+   "name": "Sioux City Musketeers",
+   "league": "USHL",
+   "aliases": [],
+   "src": "/logos/ushl/sioux-city-musketeers.svg"
+  },
+  {
+   "name": "Sioux Falls Stampede",
+   "league": "USHL",
+   "aliases": [],
+   "src": "/logos/ushl/sioux-falls-stampede.svg"
+  },
+  {
+   "name": "Tri-City Storm",
+   "league": "USHL",
+   "aliases": [],
+   "src": "/logos/ushl/tri-city-storm.svg"
+  },
+  {
+   "name": "Waterloo Black Hawks",
+   "league": "USHL",
+   "aliases": [],
+   "src": "/logos/ushl/waterloo-black-hawks.svg"
+  },
+  {
+   "name": "Aberdeen Wings",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/aberdeen-wings.png"
+  },
+  {
+   "name": "Amarillo Wranglers",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/amarillo-wranglers.png"
+  },
+  {
+   "name": "Anchorage Wolverines",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/anchorage-wolverines.png"
+  },
+  {
+   "name": "Austin Bruins",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/austin-bruins.png"
+  },
+  {
+   "name": "Billings Cattle Punchers",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/billings-cattle-punchers.png"
+  },
+  {
+   "name": "Bismarck Bobcats",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/bismarck-bobcats.png"
+  },
+  {
+   "name": "Corpus Christi IceRays",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/corpus-christi-icerays.png"
+  },
+  {
+   "name": "Danbury Hat Tricks",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/danbury-hat-tricks.png"
+  },
+  {
+   "name": "El Paso Rhinos",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/el-paso-rhinos.png"
+  },
+  {
+   "name": "Elmira Aviators",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/elmira-aviators.png"
+  },
+  {
+   "name": "Fairbanks Ice Dogs",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/fairbanks-ice-dogs.png"
+  },
+  {
+   "name": "Grand Junction River Hawks",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/grand-junction-river-hawks.png"
+  },
+  {
+   "name": "Houston Bulls",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/houston-bulls.png"
+  },
+  {
+   "name": "Idaho Falls Spud Kings",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/idaho-falls-spud-kings.png"
+  },
+  {
+   "name": "Janesville Jets",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/janesville-jets.png"
+  },
+  {
+   "name": "Johnstown Tomahawks",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/johnstown-tomahawks.png"
+  },
+  {
+   "name": "Kenai River Brown Bears",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/kenai-river-brown-bears.png"
+  },
+  {
+   "name": "Lone Star Brahmas",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/lone-star-brahmas.png"
+  },
+  {
+   "name": "Maryland Black Bears",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/maryland-black-bears.png"
+  },
+  {
+   "name": "Minnesota Mallards",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/minnesota-mallards.png"
+  },
+  {
+   "name": "Minnesota Wilderness",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/minnesota-wilderness.png"
+  },
+  {
+   "name": "Minot Minotauros",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/minot-minotauros.png"
+  },
+  {
+   "name": "New Hampshire Mountain Kings",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/new-hampshire-mountain-kings.png"
+  },
+  {
+   "name": "New Jersey Titans",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/new-jersey-titans.png"
+  },
+  {
+   "name": "New Mexico Ice Wolves",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/new-mexico-ice-wolves.png"
+  },
+  {
+   "name": "Northeast Generals",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/northeast-generals.png"
+  },
+  {
+   "name": "Odessa Jackalopes",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/odessa-jackalopes.png"
+  },
+  {
+   "name": "Ogden Mustangs",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/ogden-mustangs.png"
+  },
+  {
+   "name": "Oklahoma Warriors",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/oklahoma-warriors.png"
+  },
+  {
+   "name": "Philadelphia Rebels",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/philadelphia-rebels.png"
+  },
+  {
+   "name": "Pueblo Peppers",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/pueblo-peppers.png"
+  },
+  {
+   "name": "Shreveport Mudbugs",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/shreveport-mudbugs.png"
+  },
+  {
+   "name": "Springfield Jr. Blues",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/springfield-jr-blues.png"
+  },
+  {
+   "name": "St. Cloud Norsemen",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/st-cloud-norsemen.png"
+  },
+  {
+   "name": "Watertown Shamrocks",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/watertown-shamrocks.png"
+  },
+  {
+   "name": "Wisconsin Windigo",
+   "league": "NAHL",
+   "aliases": [],
+   "src": "/logos/nahl/wisconsin-windigo.png"
+  }
+ ],
+ "leagues": {
+  "USHL": {
+   "src": "/logos/leagues/ushl.svg",
+   "dark": "/logos/leagues/ushl-dark.svg"
+  },
+  "NAHL": {
+   "src": "/logos/leagues/nahl.png"
+  },
+  "BCHL": {
+   "src": "/logos/leagues/bchl.png"
+  },
+  "QMJHL": {
+   "src": "/logos/leagues/qmjhl.png"
+  },
+  "OHL": {
+   "src": "/logos/leagues/ohl.png",
+   "invert": true
+  }
+ }
+}

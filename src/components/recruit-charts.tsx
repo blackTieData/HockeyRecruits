@@ -1,15 +1,43 @@
-import { useMemo, type ReactNode } from "react"
-import { Area, AreaChart, Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts"
+import { useEffect, useMemo, useState, type ReactNode } from "react"
+import { AreaChart, BarChart, createTheme, type Series } from "generative-charts"
+import "generative-charts/styles.css"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import {
-  ChartContainer, ChartTooltip, ChartTooltipContent, type ChartConfig,
-} from "@/components/ui/chart"
 import type { Row } from "@/lib/sheet"
 
 type Datum = { name: string; count: number }
 
-// Every chart is a single series, so they share one hue (slot 1) and need no legend.
-const config = { count: { label: "Players", color: "var(--chart-1)" } } satisfies ChartConfig
+// Neon Instruments flips its tooltips (dark in light mode, light in dark mode); point them at the
+// app's own popover colors instead, and widen the palette so bars can each get their own hue.
+const tooltip = {
+  tooltipBackground: "var(--popover)", tooltipText: "var(--popover-foreground)", tooltipBorder: "var(--border)",
+}
+const THEME = createTheme("neon-instruments", {
+  id: "recruits",
+  name: "Recruits",
+  light: { ...tooltip, palette: ["#ff2d55", "#32ade6", "#34c759", "#ff9500", "#af52de", "#007aff", "#ffcc00", "#00c7be", "#a2845e", "#5856d6"] },
+  dark: { ...tooltip, palette: ["#ff4569", "#70d7ff", "#32d760", "#ffa51f", "#c66bfa", "#2f95ff", "#ffd60a", "#63e6e2", "#b59469", "#7d7aff"] },
+})
+const series: Series<Datum>[] = [{ dataKey: "count", label: "Players" }]
+
+// The package colors by series, not by mark, so each category becomes its own series in a stacked
+// bar where every row fills only its own column. Colors come from the theme palette, in order.
+function perBar(data: Datum[]) {
+  const rows = data.map((d, i) => ({ name: d.name, [`s${i}`]: d.count }))
+  const cols: Series<Record<string, unknown>>[] = data.map((_, i) => ({ dataKey: `s${i}`, label: "Players" }))
+  return { rows, cols }
+}
+
+// Follows the app's light/dark toggle, which flips a class on <html>.
+function useAppearance() {
+  const read = () => (document.documentElement.classList.contains("dark") ? "dark" : "light") as "dark" | "light"
+  const [appearance, setAppearance] = useState(read)
+  useEffect(() => {
+    const obs = new MutationObserver(() => setAppearance(read()))
+    obs.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] })
+    return () => obs.disconnect()
+  }, [])
+  return appearance
+}
 
 function countBy(rows: string[][], key: (r: string[]) => string | null, top?: number, foldRest = true): Datum[] {
   const counts = new Map<string, number>()
@@ -86,38 +114,28 @@ function ChartCard({ title, description, children, className }: {
   )
 }
 
-function HBar({ data, labelWidth = 130 }: { data: Datum[]; labelWidth?: number }) {
+function Bars({ data, appearance, variant, height }: {
+  data: Datum[]; appearance: "dark" | "light"; variant: "horizontal" | "vertical"; height: number
+}) {
+  const { rows, cols } = perBar(data)
   return (
-    <ChartContainer config={config} className="aspect-auto w-full" style={{ height: data.length * 28 + 24 }}>
-      <BarChart data={data} layout="vertical" margin={{ left: 0, right: 12 }} barCategoryGap={4}>
-        <CartesianGrid horizontal={false} />
-        <XAxis type="number" tickLine={false} axisLine={false} allowDecimals={false} />
-        <YAxis type="category" dataKey="name" width={labelWidth} tickLine={false} axisLine={false}
-          interval={0} tick={{ fontSize: 12 }} />
-        <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
-        <Bar dataKey="count" fill="var(--color-count)" radius={[0, 4, 4, 0]} maxBarSize={20} />
-      </BarChart>
-    </ChartContainer>
+    <BarChart data={rows} categoryKey="name" series={cols} variant={variant} layout="stacked"
+      theme={THEME} appearance={appearance} showLegend={false} height={height} />
   )
 }
 
-function VBar({ data }: { data: Datum[] }) {
-  return (
-    <ChartContainer config={config} className="aspect-auto h-60 w-full">
-      <BarChart data={data} margin={{ left: -16, right: 4 }}>
-        <CartesianGrid vertical={false} />
-        <XAxis dataKey="name" tickLine={false} axisLine={false} interval={0} />
-        <YAxis tickLine={false} axisLine={false} allowDecimals={false} />
-        <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
-        <Bar dataKey="count" fill="var(--color-count)" radius={[4, 4, 0, 0]} maxBarSize={48} />
-      </BarChart>
-    </ChartContainer>
-  )
+function HBar({ data, appearance }: { data: Datum[]; appearance: "dark" | "light" }) {
+  return <Bars data={data} appearance={appearance} variant="horizontal" height={data.length * 30 + 60} />
+}
+
+function VBar({ data, appearance }: { data: Datum[]; appearance: "dark" | "light" }) {
+  return <Bars data={data} appearance={appearance} variant="vertical" height={260} />
 }
 
 type Props = { headers: string[]; rows: Row[]; basis: string }
 
 export function RecruitCharts({ headers, rows, basis }: Props) {
+  const appearance = useAppearance()
   const data = useMemo(() => {
     const col = (name: string) => headers.indexOf(name)
     const cells = rows.map(r => r.cells)
@@ -130,6 +148,7 @@ export function RecruitCharts({ headers, rows, basis }: Props) {
       classes: countBy(cells, r => validClass(r[col("Class")] ?? ""))
         .sort((a, b) => a.name.localeCompare(b.name)),
       positions: countBy(cells, r => positionGroup(r[col("Position")] ?? "")),
+      verification: countBy(cells, r => r[col("Verification")] || "Not marked"),
       leagues: countBy(cells, r => league(r[col("Current Team")] ?? ""), 12),
       nationalities: countBy(cells, r => nationality(r[col("Nationality")] ?? ""), 8),
     }
@@ -143,37 +162,32 @@ export function RecruitCharts({ headers, rows, basis }: Props) {
     <div className="grid gap-4 md:grid-cols-2">
       <ChartCard className="md:col-span-2" title="Commitments by month"
         description={`${basis} by date committed, last 24 months`}>
-        <ChartContainer config={config} className="aspect-auto h-56 w-full">
-          <AreaChart data={data.months} margin={{ left: -16, right: 8 }}>
-            <CartesianGrid vertical={false} />
-            <XAxis dataKey="name" tickLine={false} axisLine={false} minTickGap={24} />
-            <YAxis tickLine={false} axisLine={false} allowDecimals={false} />
-            <ChartTooltip content={<ChartTooltipContent indicator="line" />} />
-            <Area dataKey="count" type="monotone" stroke="var(--color-count)" strokeWidth={2}
-              fill="var(--color-count)" fillOpacity={0.15} />
-          </AreaChart>
-        </ChartContainer>
+        <AreaChart data={data.months} xKey="name" series={series} curve="smooth"
+          theme={THEME} appearance={appearance} showLegend={false} height={240} />
       </ChartCard>
       <ChartCard title="By conference" description={basis}>
-        <HBar data={data.conferences} />
+        <HBar appearance={appearance} data={data.conferences} />
       </ChartCard>
       <ChartCard title="By class" description={`${basis}, by recruiting class`}>
-        <VBar data={data.classes} />
+        <VBar appearance={appearance} data={data.classes} />
       </ChartCard>
       <ChartCard title="Top schools" description={`${basis}, top 15`}>
-        <HBar data={data.schools} labelWidth={200} />
+        <HBar appearance={appearance} data={data.schools} />
       </ChartCard>
       <div className="grid gap-4">
         <ChartCard title="By position" description={basis}>
-          <VBar data={data.positions} />
+          <VBar appearance={appearance} data={data.positions} />
         </ChartCard>
         <ChartCard title="By nationality" description={`${basis}, top 8`}>
-          <HBar data={data.nationalities} />
+          <HBar appearance={appearance} data={data.nationalities} />
         </ChartCard>
       </div>
-      <ChartCard className="md:col-span-2" title="Feeder leagues"
+      <ChartCard title="By verification" description={`${basis}, from the sheet's color key`}>
+        <HBar appearance={appearance} data={data.verification} />
+      </ChartCard>
+      <ChartCard title="Feeder leagues"
         description={`${basis}, by the league of their current team, top 12`}>
-        <HBar data={data.leagues} />
+        <HBar appearance={appearance} data={data.leagues} />
       </ChartCard>
     </div>
   )

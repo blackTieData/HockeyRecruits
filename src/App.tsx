@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect, useMemo, useState } from "react"
 import { Columns3, Search, X } from "lucide-react"
 import { RecruitsTable, type Sort } from "@/components/recruits-table"
+import { KeyLegend } from "@/components/key-icon"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader } from "@/components/ui/card"
@@ -14,10 +15,10 @@ import { Skeleton } from "@/components/ui/skeleton"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { compare, loadSheet, type Sheet } from "@/lib/sheet"
 
-// Charts pull in recharts, so load them only when the Charts tab is opened.
+// Charts pull in generative-charts, so load them only when the Charts tab is opened.
 const RecruitCharts = lazy(() => import("@/components/recruit-charts").then(m => ({ default: m.RecruitCharts })))
 
-const FILTER_COLS = ["Status", "Conference", "School", "Class", "Position"]
+const FILTER_COLS = ["Status", "Verification", "Conference", "School", "Class", "Position"]
 const ALL = "__all" // Radix Select can't use "" as an item value
 const HIDDEN_KEY = "hiddenColumns"
 
@@ -104,7 +105,7 @@ export default function App() {
   return (
     <div className="mx-auto flex max-w-[1400px] flex-col gap-4 p-4 md:p-6">
       <header className="flex items-center justify-between gap-3">
-        <h1 className="text-2xl font-semibold tracking-tight">Hockey Recruits</h1>
+        <h1 className="text-2xl font-semibold tracking-tight">Matthew Auchincloss's Very Accurate College Hockey Commitment Tracker</h1>
         <ThemeToggle />
       </header>
 
@@ -176,6 +177,7 @@ export default function App() {
                     Clear {highlighted.size} highlighted
                   </Button>
                 )}
+                <KeyLegend />
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="outline" size="sm"><Columns3 /> Columns</Button>
@@ -200,8 +202,8 @@ export default function App() {
             </div>
 
             <TabsContent value="table" className="mt-2 flex flex-col gap-2">
-              <p className="text-sm text-muted-foreground">Click a row to highlight it; click again to clear.</p>
-              <RecruitsTable headers={headers} rows={filtered} visibleCols={visibleCols}
+              <p className="text-sm text-muted-foreground">Click a row to highlight it; click again to clear. Hover or tap an icon to see what it means.</p>
+              <RecruitsTable headers={headers} rows={filtered} allRows={sheet.rows} visibleCols={visibleCols}
                 sort={sort} onSort={onSort} highlighted={highlighted} onToggleRow={toggleRow} />
             </TabsContent>
             <TabsContent value="charts" className="mt-2">
