@@ -1,0 +1,96 @@
+:root {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --text: #1c2330;
+  --muted: #667085;
+  --border: #d9dee7;
+  --accent: #1f5fbf;
+  --row-alt: #f2f5f9;
+  --error: #b42318;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12161d;
+    --surface: #1a2029;
+    --text: #e6e9ef;
+    --muted: #98a2b3;
+    --border: #2e3644;
+    --accent: #6ea3ff;
+    --row-alt: #1f2631;
+    --error: #ff8a80;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header, main { padding: 16px; max-width: 1400px; margin: 0 auto; }
+
+h1 { margin: 0 0 12px; font-size: 1.5rem; }
+
+form, #toolbar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 10px;
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+button {
+  padding: 8px 16px;
+  font: inherit;
+  color: #fff;
+  background: var(--accent);
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#toolbar { margin-bottom: 12px; }
+#search { max-width: 360px; }
+#count, #status { color: var(--muted); }
+#status.error { color: var(--error); }
+
+#table-wrap {
+  overflow: auto;
+  max-height: calc(100vh - 200px);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+#table-wrap:empty { display: none; }
+
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+
+th, td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background: var(--surface);
+  cursor: pointer;
+  user-select: none;
+}
+th[aria-sort="ascending"]::after { content: " ▲"; color: var(--accent); }
+th[aria-sort="descending"]::after { content: " ▼"; color: var(--accent); }
+
+tbody tr:nth-child(even) { background: var(--row-alt); }
+
+a { color: var(--accent); }
