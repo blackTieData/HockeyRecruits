@@ -94,3 +94,12 @@ th[aria-sort="descending"]::after { content: " ▼"; color: var(--accent); }
 tbody tr:nth-child(even) { background: var(--row-alt); }
 
 a { color: var(--accent); }
+
+select {
+  padding: 8px 10px;
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}

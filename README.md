@@ -7,7 +7,8 @@ A simple static web app for viewing the contents of a public Google Sheet as a s
 1. In Google Sheets, click **Share** and set General access to **Anyone with the link → Viewer**.
 2. Open `index.html` and paste the sheet's link, then click **Load**.
 
-- The first row of the sheet is used as column headers.
+- For a generic sheet, the first row is used as column headers.
+- For the hockey recruiting sheet (one block per school with DECOMMITS / TRACKING sections), the blocks are flattened into a single table with School, Conference and Status columns, and dropdown filters for each.
 - Click a column header to sort (click again to reverse).
 - Type in the filter box to show only rows containing that text.
 - To show a specific tab, use a link that includes `#gid=...` (copy the URL while that tab is open).
